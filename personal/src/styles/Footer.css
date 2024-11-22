@@ -1,0 +1,143 @@
+/* Footer Ana Container */
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: linear-gradient(120deg, #1e3c72, #2a5298); /* Sidebar ile uyumlu mavi/lacivert tonları */
+	color: white;
+	padding: 50px 20px;
+	text-align: center;
+	border-radius: 50px 50px 0 0;
+	overflow: hidden;
+	z-index: 10;
+	box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Arka Plan Dalga Efekti */
+.footer::before {
+	content: "";
+	position: absolute;
+	top: -50px;
+	left: 0;
+	width: 100%;
+	height: 200px;
+	background: radial-gradient(circle, rgba(238, 68, 68, 0.3) 15%, transparent 70%);
+	clip-path: polygon(0% 50%, 25% 60%, 50% 50%, 75% 40%, 100% 50%, 100% 100%, 0% 100%);
+	animation: wave-motion 8s ease-in-out infinite alternate;
+	z-index: 1;
+	opacity: 0.5;
+}
+
+/* Arka Plan Dalga Animasyonu */
+@keyframes wave-motion {
+	from {
+		transform: translateY(10px);
+	}
+	to {
+		transform: translateY(-10px);
+	}
+}
+
+/* Footer İçeriği */
+.footer h3 {
+	font-size: 2rem;
+	margin-bottom: 15px;
+	z-index: 2;
+	position: relative;
+}
+
+.footer p {
+	font-size: 1rem;
+	color: #d1d1d1;
+	margin-bottom: 20px;
+	z-index: 2;
+	position: relative;
+}
+
+.footer-links {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	margin-bottom: 20px;
+	z-index: 2;
+	position: relative;
+}
+
+.footer-links a {
+	color: #f3f3f3;
+	text-decoration: none;
+	font-size: 1.2rem;
+	transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a:hover {
+	color: #ffd700;
+	transform: scale(1.1);
+}
+
+/* Footer Sosyal İkonlar */
+.footer-socials {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	z-index: 2;
+	position: relative;
+}
+
+.footer-socials a {
+	color: white;
+	font-size: 2rem;
+	margin: 0 10px;
+	transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+	color: #ff4500; /* Turuncu ton */
+	transform: scale(1.2);
+}
+
+.footer-credits {
+	font-size: 0.9rem;
+	margin-top: 15px;
+	z-index: 2;
+	position: relative;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+	.footer {
+		padding: 30px 10px; /* Daha az padding */
+		text-align: center;
+	}
+
+	.footer h3 {
+		font-size: 1.5rem; /* Daha küçük başlık */
+	}
+
+	.footer p {
+		font-size: 0.9rem; /* Daha küçük metin */
+	}
+
+	.footer-links {
+		flex-direction: column; /* Linkleri dikey hizala */
+		gap: 15px; /* Daha az boşluk */
+	}
+
+	.footer-links a {
+		font-size: 1rem; /* Link metni boyutunu küçült */
+	}
+
+	.footer-socials {
+		flex-direction: row; /* İkonları yatayda tut */
+		gap: 15px; /* Daha az boşluk */
+	}
+
+	.footer-socials a {
+		font-size: 1.5rem; /* İkonları küçült */
+	}
+
+	.footer-credits {
+		font-size: 0.8rem; /* Daha küçük kredi metni */
+		margin-top: 10px;
+	}
+}

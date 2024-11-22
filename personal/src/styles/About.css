@@ -1,0 +1,29 @@
+.about-container {
+	text-align: center;
+	padding: 2rem;
+  }
+  
+  .about-container h1 {
+	font-size: 2.5rem;
+	color: #333;
+  }
+  
+  .about-container p {
+	font-size: 1.2rem;
+	color: #555;
+	line-height: 1.8;
+	max-width: 600px;
+	margin: 1rem auto;
+  }
+  
+  /* Mobil Cihazlar için Düzen */
+  @media (max-width: 768px) {
+	.about-container h1 {
+	  font-size: 2rem;
+	}
+  
+	.about-container p {
+	  font-size: 1rem;
+	}
+  }
+  
